@@ -1,26 +1,16 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">Stisla</a>
+            <a href="{{ url('home') }}">Padang Resto</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">St</a>
+            <a href="{{ url('home') }}">PR</a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
             <li class="nav-item dropdown {{ $type_menu === 'dashboard' ? 'active' : '' }}">
-                <a href="#"
-                    class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
-                <ul class="dropdown-menu">
-                    <li class='{{ Request::is('dashboard-general-dashboard') ? 'active' : '' }}'>
-                        <a class="nav-link"
-                            href="{{ url('dashboard-general-dashboard') }}">General Dashboard</a>
-                    </li>
-                    <li class="{{ Request::is('dashboard-ecommerce-dashboard') ? 'active' : '' }}">
-                        <a class="nav-link"
-                            href="{{ url('dashboard-ecommerce-dashboard') }}">Ecommerce Dashboard</a>
-                    </li>
-                </ul>
+                <a href="{{ url('home') }}"
+                    class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="nav-item dropdown {{ $type_menu === 'users' ? 'active' : '' }}">
                 <a class="nav-link"
@@ -29,6 +19,10 @@
             <li class="nav-item dropdown {{ $type_menu === 'products' ? 'active' : '' }}">
                 <a class="nav-link"
                     href="{{ url('products') }}"><i class="fa-solid fa-cart-plus"></i> <span>Products</span></a>
+            </li>
+            <li class="nav-item dropdown {{ $type_menu === 'categories' ? 'active' : '' }}">
+                <a class="nav-link"
+                    href="{{ url('categories') }}"><i class="fa-solid fa-tag"></i></i> <span>Categories</span></a>
             </li>
         </ul>
     </aside>

@@ -133,7 +133,7 @@ class ProductController extends Controller
                 $product->save();
             }
 
-            return redirect()->route('products.index')->with('success', 'Product created successfully');
+            return redirect()->route('products.index')->with('success', 'Product updated successfully');
         } catch (Exception $e) {
             return back()
                 ->withInput()
