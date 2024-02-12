@@ -26,6 +26,10 @@
                 <a class="nav-link"
                     href="{{ url('users') }}"><i class="far fa-user"></i> <span>Users</span></a>
             </li>
+            <li class="nav-item dropdown {{ $type_menu === 'products' ? 'active' : '' }}">
+                <a class="nav-link"
+                    href="{{ url('products') }}"><i class="fa-solid fa-cart-plus"></i> <span>Products</span></a>
+            </li>
         </ul>
     </aside>
 </div>
